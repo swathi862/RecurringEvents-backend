@@ -1,3 +1,4 @@
+import os
 """
 Django settings for practiceCalendar project.
 
@@ -20,7 +21,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '%5y)-f&9_f++cgygt87!f@ni#vv$wxdbj4*__przh40uvv#z38'
+# SECRET_KEY = '%5y)-f&9_f++cgygt87!f@ni#vv$wxdbj4*__przh40uvv#z38'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '%5y)-f&9_f++cgygt87!f@ni#vv$wxdbj4*__przh40uvv#z38')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
